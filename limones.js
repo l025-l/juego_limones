@@ -14,10 +14,11 @@ let limonY=5;
 let puntaje=0;
 let vidas=3
 let velocidadCaida=200;
+let intervalo;
 
 
 function iniciar(){
-    setInterval(bajarLimon,velocidadCaida); //primerParametro : funcion segundoParametro: tiempo de ms
+    intervalo=setInterval(bajarLimon,velocidadCaida); //primerParametro : funcion segundoParametro: tiempo de ms
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -83,6 +84,7 @@ function dectectarAtrapado(){
             velocidadCaida=100;
         }else if(puntaje==10){
             alert("¡GANASTE! ¡TIENES LOS LIMONES!");
+            clearInterval(intervalo);
         }
     }
 }
@@ -94,6 +96,7 @@ function detectarPiso(){
         mostrarEnSpan("txtVidas",vidas);
         if(vidas==0){
             alert("GAME OVER");
+            clearInterval(intervalo);
         }
     }
 }
