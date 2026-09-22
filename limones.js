@@ -13,7 +13,7 @@ let limonX=canvas.width/2;
 let limonY=5;
 let puntaje=0;
 let vidas=3
-let velocidadCaida=100;
+let velocidadCaida=200;
 
 
 function iniciar(){
@@ -77,6 +77,13 @@ function dectectarAtrapado(){
         aparecerLimon();
         puntaje=puntaje+1;
         mostrarEnSpan("txtPuntaje",puntaje);
+        if (puntaje==3){
+            velocidadCaida=150;
+        }else if(puntaje==6){
+            velocidadCaida=100;
+        }else if(puntaje==10){
+            alert("¡GANASTE! ¡TIENES LOS LIMONES!");
+        }
     }
 }
 
