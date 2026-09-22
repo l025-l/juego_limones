@@ -12,7 +12,7 @@ let personajeY=canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
 let limonX=canvas.width/2;
 let limonY=5;
 let puntaje=0;
-let vidas=3
+let vidas=3;
 let velocidadCaida=200;
 let intervalo;
 
@@ -105,4 +105,13 @@ function aparecerLimon(){
     limonX=generarAleatorio(onabort,canvas.width-ANCHO_LIMON);
     limonY=0
     actualizarPantalla();
+}
+
+function reiniciar(){
+    vidas=3;
+    puntaje=0;
+    mostrarEnSpan("txtVidas",vidas);
+    mostrarEnSpan("txtPuntaje",puntaje);
+    iniciar();
+
 }
