@@ -1,31 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(250,204,21,.10), transparent 25%),
+    radial-gradient(circle at 85% 85%, rgba(34,197,94,.10), transparent 25%),
+    linear-gradient(135deg, #07111f, #0b1728 50%, #101827);
+  color: #f8fafc;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 35px 18px 45px;
+  min-height: 100vh;
 }
 
 .contenedor {
-  max-width: 800px;
-  margin: 0 auto;
+  width: min(850px, 100%);
+  margin: auto;
 }
 
-canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
-  margin: 20px auto;
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
 }
 
-.panel {
-  margin: 20px 0;
+.insignia {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #facc15, #eab308);
+  box-shadow: 0 10px 30px rgba(234,179,8,.25);
+  font-size: 34px;
+  transform: rotate(-5deg);
 }
 
-.botones button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
+.etiqueta {
+  margin: 0 0 3px;
+  color: #facc15;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.subtitulo {
+  margin: 9px 0 0;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.autor {
+  display: inline-flex;
+  gap: 8px;
+  margin: 15px auto 24px;
+  padding: 7px 14px;
+  border: 1px solid rgba(250,204,21,.20);
+  border-radius: 999px;
+  background: rgba(15,23,42,.72);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.autor span { color: #64748b; }
+.autor strong { color: #facc15; }
+
+.zona-juego {
+  padding: 10px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(30,41,59,.95), rgba(15,23,42,.95));
+  border: 1px solid rgba(148,163,184,.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px 12px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
