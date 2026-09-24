@@ -94,3 +94,22 @@ h1 {
   font-weight: 800;
   letter-spacing: 1px;
 }
+
+/* NUEVOS ESTILOS PARA LA IMAGEN DEL CIERVO */
+.contenedor-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.contenedor-logo img {
+  width: 260px; /* Ancho ajustado para que parezca una tarjeta */
+  height: 160px;
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+  object-position: center;
+  border-radius: 12px;
+  border: 2px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
