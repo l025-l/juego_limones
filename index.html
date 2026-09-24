@@ -2,13 +2,15 @@
 <html>
 <head>
   <title>Caza Limones</title>
+  <!-- Fuente moderna añadida -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="limones.css">
   <script src="utils.js"></script>
 </head>
 <body onload="iniciar()">
   <div class="contenedor">
     
-    <!-- NUEVO CONTENEDOR PARA LA IMAGEN DEL CIERVO -->
+    <!-- CONTENEDOR PARA LA IMAGEN DEL CIERVO -->
     <div class="contenedor-logo">
       <img src="ciervo.jpg" alt="Logo Ciervo">
     </div>
@@ -32,21 +34,24 @@
         <div class="estado"><span class="punto"></span><span>PARTIDA ACTIVA</span></div>
         <div class="objetivo">¡ATRAPA LOS LIMONES!</div>
       </div>
+      <!-- Canvas responsivo -->
       <canvas id="areaJuego" width="600" height="400"></canvas>
     </section>
 
+    <!-- PANEL DE PUNTUACIÓN Y VIDAS -->
     <div class="panel">
       <div class="marcador">
-        <span class="icono">🏆</span>
-        <div><small>PUNTAJE</small><strong id="txtPuntaje">0</strong></div>
+        <div class="icono-contenedor"><span class="icono">🏆</span></div>
+        <div class="info-marcador"><small>PUNTAJE</small><strong id="txtPuntaje">0</strong></div>
       </div>
       <div class="separador"></div>
       <div class="marcador">
-        <span class="icono">❤️</span>
-        <div><small>VIDAS</small><strong id="txtVidas">3</strong></div>
+        <div class="icono-contenedor"><span class="icono">❤️</span></div>
+        <div class="info-marcador"><small>VIDAS</small><strong id="txtVidas">3</strong></div>
       </div>
     </div>
 
+    <!-- CONTROLES -->
     <div class="botones">
       <button class="btn btn-izquierda" onclick="moverIzquierda()"><span>◀</span> Izquierda</button>
       <button class="btn btn-derecha" onclick="moverDerecha()">Derecha <span>▶</span></button>
